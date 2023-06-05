@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 provider "vault" {
-  address = "https://sample-cluster-public-vault-4b504fb4.bf21a3ce.z1.hashicorp.cloud:8200/"
+  address = "https://sample-cluster-public-vault-4b504fb4.bf21a3ce.z1.hashicorp.cloud:8200"
   token   = "hvs.CAESIHnnjOWT4hcU58kPevANC0HpxOHPwE0eeAsEWF1jm59SGicKImh2cy5keDdzR2d2Y1dIZkx2TElxVEV6S0hpcVkueFlzaXIQnQE2"
 
 }
