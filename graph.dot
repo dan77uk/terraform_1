@@ -1,0 +1,28 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_instance.first_instance (expand)" [label = "aws_instance.first_instance", shape = "box"]
+		"[root] aws_security_group.allow_tls (expand)" [label = "aws_security_group.allow_tls", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] var.access_key" [label = "var.access_key", shape = "note"]
+		"[root] var.ami_list" [label = "var.ami_list", shape = "note"]
+		"[root] var.instance_list" [label = "var.instance_list", shape = "note"]
+		"[root] var.instance_type_size" [label = "var.instance_type_size", shape = "note"]
+		"[root] var.name_list" [label = "var.name_list", shape = "note"]
+		"[root] var.secret_key" [label = "var.secret_key", shape = "note"]
+		"[root] var.security_group_vpn_ip" [label = "var.security_group_vpn_ip", shape = "note"]
+		"[root] aws_instance.first_instance (expand)" -> "[root] aws_security_group.allow_tls (expand)"
+		"[root] aws_security_group.allow_tls (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.allow_tls (expand)" -> "[root] var.security_group_vpn_ip"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.first_instance (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] var.access_key"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] var.secret_key"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+		"[root] root" -> "[root] var.ami_list"
+		"[root] root" -> "[root] var.instance_list"
+		"[root] root" -> "[root] var.instance_type_size"
+		"[root] root" -> "[root] var.name_list"
+	}
+}
+
