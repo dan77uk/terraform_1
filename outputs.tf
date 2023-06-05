@@ -8,6 +8,6 @@ output "first_instance_ip" {
 # }
 
 output "vault_secrets" {
-  value = data.vault_generic_secret.demo.data_json
+  value     = data.vault_generic_secret.demo.data_json
   sensitive = true
 }
