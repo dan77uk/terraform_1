@@ -1,7 +1,7 @@
 variable "security_group_vpn_ip" {}
 variable "instance_type_size" {}
-variable "access_key" {}
-variable "secret_key" {}
+# variable "access_key" {}
+# variable "secret_key" {}
 # variable "instance_tags" {
 #   description = "Project Name and Build Version"
 #   type = number
