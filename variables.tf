@@ -1,5 +1,7 @@
-variable "security_group_vpn_ip" {}
-variable "instance_type_size" {}
+variable "security_group_vpn_ip" {
+  default  = "10.20.30.40/32"
+}
+# variable "instance_type_size" {}
 # variable "access_key" {}
 # variable "secret_key" {}
 # variable "instance_tags" {
