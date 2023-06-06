@@ -1,11 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
-name: first_workflow
+name: Deploy App
 on: push
 
 jobs:
   first_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: first echo
-        run: "echo 'hello world'"
+      - name: Download Code
+        uses: actions/checkout@v3
+      - name: Investigate host
+        run: |
+          pwd
+          ls -lart
